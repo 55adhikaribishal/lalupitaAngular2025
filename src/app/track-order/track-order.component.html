@@ -1,0 +1,38 @@
+<form [formGroup]="searchOrderForm" class="search-form" (submit)="submitForm()">
+    <mat-form-field appearance="outline" class="search-input">
+      <mat-label>Enter Tracking Id to search</mat-label>
+      <input matInput formControlName="trackingId">
+  
+      <button mat-icon-button matSuffix color="primary" [disabled]="searchOrderForm.invalid" type="submit">
+        <mat-icon>search</mat-icon>
+      </button>
+  
+    </mat-form-field>
+  </form>
+
+  <div class="order-details-conatiner" *ngIf="order">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Order Details</mat-card-title>
+      </mat-card-header>
+
+      <div class="order-details">
+        Tracking ID: <strong>{{order.trackingId}}</strong>
+      </div>
+      <div class="order-details">
+        User name: <strong>{{order.userName}}</strong>
+      </div>
+      <div class="order-details">
+        Address: <strong>{{order.address}}</strong>
+      </div>
+      <div class="order-details">
+        Amount: <strong>{{order.amount | currency}}</strong>
+      </div>
+      <div class="order-details">
+        Status: <strong>{{order.orderStatus }}</strong>
+      </div>
+      <div class="order-details">
+        Date: <strong>{{order.date | date }}</strong>
+      </div>
+    </mat-card>
+  </div>

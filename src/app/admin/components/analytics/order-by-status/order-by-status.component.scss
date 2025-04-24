@@ -1,0 +1,70 @@
+.order-status-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  
+    .order-status-card {
+      width: 250px;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      text-align: center;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-8px);
+      }
+  
+      mat-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 0;
+  
+        .status-avatar {
+          background: #0288d1;
+          color: white;
+          width: 50px;
+          height: 50px;
+          font-size: 22px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin-right: 12px;
+        }
+  
+        mat-card-title {
+          font-size: 20px;
+          font-weight: bold;
+          color: #004d40;
+        }
+      }
+  
+      mat-card-content {
+        padding: 16px 0;
+  
+        .status-value {
+          font-size: 28px;
+          font-weight: bold;
+          color: #00796b;
+        }
+      }
+    }
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .order-status-container {
+      flex-direction: column;
+      align-items: center;
+  
+      .order-status-card {
+        width: 90%;
+      }
+    }
+  }
+  

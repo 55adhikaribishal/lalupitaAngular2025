@@ -1,0 +1,28 @@
+<!-- <div class="success-container">
+    <mat-card class="success-card">
+      <mat-card-title>🎉 Payment Successful!</mat-card-title>
+      <mat-card-content>
+        <p>Thank you for your order. Your payment was completed successfully.</p>
+      </mat-card-content>
+    </mat-card>
+    
+  </div> -->
+
+  <div class="success-container" *ngIf="orderDetails">
+    <div class="success-card">
+      <h1 class="success-title">🎉 Payment Successful!</h1>
+      <p class="success-message">Thank you for your order! Here is your order summary:</p>
+  
+      <div class="order-summary">
+        <p><strong>Order ID:</strong> #{{orderDetails.id}}</p>
+        <p><strong>Total Amount:</strong> {{orderDetails.amount | currency:'USD':true}}</p>
+        <p><strong>Shipping Address:</strong> {{orderDetails.address}}</p>
+      </div>
+  
+      <button mat-raised-button color="primary" class="back-button" (click)="goToMyOrders()">
+        View My Orders
+      </button>
+    </div>
+  </div>
+  <canvas id="confetti-canvas"></canvas>
+  

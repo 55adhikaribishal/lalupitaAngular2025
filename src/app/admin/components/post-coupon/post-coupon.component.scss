@@ -1,0 +1,46 @@
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #3f51b5;
+      font-weight: 600;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+  
+      .form-field {
+        margin-bottom: 20px;
+      }
+  
+      button[type="submit"] {
+        align-self: center;
+        margin-top: 12px;
+        padding: 10px 20px;
+        font-weight: 500;
+        border-radius: 6px;
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 16px;
+      margin: 20px;
+  
+      form {
+        .form-field {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  

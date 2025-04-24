@@ -1,0 +1,68 @@
+mat-card {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  
+    mat-card-title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    mat-card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      mat-form-field {
+        width: 100%;
+      }
+  
+      input[type="file"] {
+        margin-top: 10px;
+      }
+  
+      .profile-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 2px solid #ccc;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+      }
+  
+      button {
+        align-self: flex-start;
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    mat-card {
+      margin: 15px;
+      padding: 16px;
+    }
+  
+    form {
+      .profile-image img {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+  

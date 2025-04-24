@@ -1,0 +1,33 @@
+# Angular build artifacts
+/dist
+/out-tsc
+/.angular
+
+# Cache
+.angular/cache
+
+# Compiled files
+*.js
+*.js.map
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node dependencies
+/node_modules
+
+# Environment files
+/src/environments/*.ts
+!src/environments/environment.prod.ts
+
+# IDE / editor folders
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db

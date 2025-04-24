@@ -1,0 +1,42 @@
+<form [formGroup]="reviewForm"  class="review-form" (ngSubmit)="submitForm()">
+    <div class="file-upload-container">
+        <label class="file-upload-label">
+            <span> Select a File</span>
+            <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+            <mat-icon>attach_file</mat-icon>
+        </label>
+
+        <div *ngIf="selectedFile" class="image-preview">
+            <div class="circle-image">
+                <img [src]="imagePreview" alt="Selected Img" class="preview-image">
+            </div>
+        </div>
+    </div>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Rating</mat-label>
+        <mat-select formControlName="rating" name="rating">
+            <mat-option value="1">1 Star</mat-option>
+            <mat-option value="2">2 Stars</mat-option>
+            <mat-option value="3">3 Stars</mat-option>
+            <mat-option value="4">4 Stars</mat-option>
+            <mat-option value="5">5 Stars</mat-option>
+        </mat-select>
+
+        <mat-error *ngIf="reviewForm.get('rating').invalid && reviewForm.get('rating').touched">
+            Please select a Rating!
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Description</mat-label>
+        <textarea matInput placeholder="Description" formControlName="description" rows="5"></textarea>
+        <mat-error *ngIf="reviewForm.get('description').invalid && reviewForm.get('description').touched">
+            This input is required!
+        </mat-error>
+
+    </mat-form-field>
+
+    
+    <button mat-raised-button color="primary" type="submitForm()">Submit</button>
+</form>

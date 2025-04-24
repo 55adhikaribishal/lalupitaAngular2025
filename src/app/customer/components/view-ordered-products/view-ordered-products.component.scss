@@ -1,0 +1,107 @@
+.ordered-product-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+    .ordered-product {
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      
+      .product-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        
+        .product-image {
+          flex: 0 0 100px;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+          }
+        }
+        
+        .product-details {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+  
+          .item-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+  
+          .item-name {
+            font-weight: 600;
+            font-size: 18px;
+            color: #003973;
+          }
+  
+          .item-price, .item-quantity {
+            font-size: 14px;
+            color: #666;
+          }
+        }
+        
+        .action-button {
+          button {
+            white-space: nowrap;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  
+    .total-price {
+      margin-top: 24px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: right;
+      color: #2c3e50;
+    }
+  }
+  
+  /* Make it responsive for smaller screens */
+  @media (max-width: 768px) {
+    .ordered-product-container {
+      .ordered-product {
+        .product-info {
+          flex-direction: column;
+          align-items: flex-start;
+  
+          .product-image {
+            img {
+              width: 80px;
+              height: 80px;
+            }
+          }
+  
+          .action-button {
+            width: 100%;
+            button {
+              width: 100%;
+            }
+          }
+        }
+      }
+  
+      .total-price {
+        text-align: center;
+        font-size: 18px;
+      }
+    }
+  }
+  

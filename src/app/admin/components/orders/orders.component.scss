@@ -1,0 +1,94 @@
+.container {
+  padding: 24px;
+
+  mat-card {
+    padding: 16px;
+
+    mat-card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    mat-card-content {
+      overflow-x: auto;
+
+      table {
+        width: 100%;
+        min-width: 800px; // ensures scroll on small screens
+        border-collapse: collapse;
+      }
+
+      th.mat-header-cell {
+        background-color: #f5f5f5;
+        font-weight: bold;
+        color: #333;
+      }
+
+      td.mat-cell, th.mat-header-cell {
+        padding: 12px;
+        white-space: nowrap;
+      }
+
+      .bold-cell {
+        font-weight: 500;
+      }
+
+      button[mat-raised-button] {
+        margin-right: 8px;
+      }
+
+      mat-menu {
+        span {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// 🔁 Responsive Tweaks
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+
+    mat-card {
+      mat-card-content {
+        table {
+          min-width: unset;
+          font-size: 14px;
+        }
+
+        td.mat-cell, th.mat-header-cell {
+          padding: 8px;
+        }
+
+        button[mat-raised-button] {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    mat-card {
+      mat-card-content {
+        table {
+          font-size: 12px;
+        }
+
+        td.mat-cell, th.mat-header-cell {
+          padding: 6px;
+        }
+
+        button[mat-raised-button] {
+          font-size: 12px;
+          padding: 4px 8px;
+        }
+      }
+    }
+  }
+}
